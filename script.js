@@ -23,20 +23,15 @@ const logTodos = () => {
 }
 
 const populateTodos = () => {
-
+    const ol = document.getElementById("todo-list")
+    for (let i = 0; i < arrayOfTodos.length; i++) {
+        const li = document.createElement("li")
+        const liText = document.createTextNode(arrayOfTodos[i].title)
+        li.appendChild(liText)
+        ol.appendChild(li)
+    }
+    
 }
 
-const arrayOfTodos1 = [
-    {
-    "userId": 14,
-    "id": 1,
-    "title": "delectus aut autem",
-    "completed": false
-},
-{
-    "userId": 20,
-    "id": 2,
-    "title": "delectus aut autem",
-    "completed": false
-}
-]
+const selectedNumber = document.getElementById(userNum).value
+
